@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'Benton Sans Bold';
+  src: url('../static/font/benton/bentonsansf-bold.eot');
+  src: url('../static/font/benton/bentonsansf-bold.eot?#iefix') format('embedded-opentype'), url('../static/font/benton/bentonsansf-bold.woff') format('woff'), url('../static/font/benton/bentonsansf-bold.ttf') format('truetype'), url('../static/font/benton/bentonsansf-bold.svg#bentonsansf_bookbold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Benton Sans Bold Italic';
+  src: url('../static/font/benton/bentonsansf-bolditalic.eot');
+  src: url('../static/font/benton/bentonsansf-bolditalic.eot?#iefix') format('embedded-opentype'), url('../static/font/benton/bentonsansf-bolditalic.woff') format('woff'), url('../static/font/benton/bentonsansf-bolditalic.ttf') format('truetype'), url('../static/font/benton/bentonsansf-bolditalic.svg#bentonsansfbolditalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Benton Sans Book';
+  src: url('../static/font/benton/bentonsansf-book.eot');
+  src: url('../static/font/benton/bentonsansf-book.eot?#iefix') format('embedded-opentype'), url('../static/font/benton/bentonsansf-book.woff') format('woff'), url('../static/font/benton/bentonsansf-book.ttf') format('truetype'), url('../static/font/benton/bentonsansf-book.svg#bentonsansfbook') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Benton Sans Book Bold';
+  src: url('../static/font/benton/bentonsansf-bold.eot');
+  src: url('../static/font/benton/bentonsansf-bold.eot?#iefix') format('embedded-opentype'), url('../static/font/benton/bentonsansf-bold.woff') format('woff'), url('../static/font/benton/bentonsansf-bold.ttf') format('truetype'), url('../static/font/benton/bentonsansf-bold.svg#bentonsansf_bookbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Benton Sans Medium';
+  src: url('../static/font/benton/bentonsansf-medium.eot');
+  src: url('../static/font/benton/bentonsansf-medium.eot?#iefix') format('embedded-opentype'), url('../static/font/benton/bentonsansf-medium.woff') format('woff'), url('../static/font/benton/bentonsansf-medium.ttf') format('truetype'), url('../static/font/benton/bentonsansf-medium.svg#bentonsansfmedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Benton Sans Extra Light';
+  src: url('../static/font/benton/bentonsansf-extralight.eot');
+  src: url('../static/font/benton/bentonsansf-extralight.eot?#iefix') format('embedded-opentype'), url('../static/font/benton/bentonsansf-extralight.woff') format('woff'), url('../static/font/benton/bentonsansf-extralight.ttf') format('truetype'), url('../static/font/benton/bentonsansf-extralight.svg#bentonsansfextralight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*
+@imagePath      : 'static/img/';
+
+@friedolin      : '@{imagePath}friedolin.png';
+@friedolin2x    : '@{imagePath}friedolin.png';
+
+@frogWordMark   : '@{imagePath}frog-wordmark.png';
+@frogWordMark2x : '@{imagePath}frog-wordmark@2x.png';
+*/
+button,
+a.button,
+input[type='button'] {
+  display: inline-block;
+  padding: 7px 10px;
+  color: #161616;
+  background-color: transparent;
+  border: 2px solid currentColor;
+  font: bold 0.625em/1.8em 'Benton Sans Bold' sans-serif;
+  text-transform: uppercase;
+  text-shadow: none;
+  cursor: pointer;
+}
+button:hover,
+a.button:hover,
+input[type='button']:hover {
+  background-color: #161616;
+  color: #fff;
+}
+button[disabled],
+a.button[disabled],
+input[type='button'][disabled],
+button.disabled,
+a.button.disabled,
+input[type='button'].disabled {
+  color: #959595;
+  background-color: transparent;
+  cursor: default;
+}

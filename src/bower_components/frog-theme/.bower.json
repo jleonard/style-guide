@@ -1,0 +1,13 @@
+{
+  "name": "frog-theme",
+  "version": "0.0.1",
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.1",
+    "commit": "307ac0b58440e3edfc8eca83c2cbe11f57214f27"
+  },
+  "_source": "https://gitus.frogdesign.com/scm/dsuxt/frog-theme.git",
+  "_target": "*",
+  "_originalSource": "https://gitus.frogdesign.com/scm/dsuxt/frog-theme.git"
+}

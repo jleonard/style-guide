@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Style Guide</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="css/style-guide.css">
+
+    </head>
+    <body>
+
+      <aside id='sidebar'>
+        <i></i>
+        <span>Style Guide</span>
+        <ul>
+        </ul>
+      </aside>
+
+      <main>
+        <h1>Style Guide</h1>
+<blockquote>
+<p>A project skeleton for creating component tear-sheets and style guides. Specifically this is a starting point for documenting color palettes, typography and ui elements or components.</p>
+</blockquote>
+<h2>Getting Started</h2>
+<ol>
+<li>Install <a href="http://nodejs.org/">Node + NPM</a></li>
+<li>Install <a href="http://harpjs.com/">Harp</a></li>
+<li>Clone the repo</li>
+</ol>
+<h3>Helpful harp commands</h3>
+<p>To run a server and live-reload as you work : <code>harp server src --port 3000</code><br>To compile a static website : <code>harp compile src dist</code></p>
+<h3>The project structure</h3>
+<pre><code>src
+├── _layout.ejs      // the layout template
+├── _partials        // partials for style guide sections
+├── css              // the .less files used for the styleguide
+├── index.ejs        // the tearsheet   
+└── js               // js files specific to the style guide functionality</code></pre>
+<h2>The Javascript</h2>
+<blockquote>
+<p><strong>No 3rd party dependencies required! All .js is native to avoid conflicts with the libs used in the UI.</strong></p>
+</blockquote>
+<pre><code>src/js
+├── code.snippets.js
+├── color.palette.js
+├── lorem.js
+├── navigation.js
+├── prism.js
+└── annotation.js</code></pre>
+<hr>
+<ol>
+<li><strong><code>annotation.js</code></strong> - A quick way to expose an element&#39;s tag, class and style information. Good for exposing typography info.</li>
+</ol>
+<blockquote>
+<p><strong>Note</strong> that this displays the browser&#39;s <strong>computed styles</strong>. Example, css&#39;s rem values will display as pixels.</p>
+</blockquote>
+<p><strong>Showing tag and class info</strong>  </p>
+<pre><code class="language-html">&lt;h1 data-show-tag class=&#39;one two&#39;&gt;&lt;/h1&gt;
+
+&lt;!-- outputs --&gt;
+&lt;h1 data-show-tag &gt;The data-show-tag attribute is set as the element&#39;s :before pseduo element content.&lt;/h1&gt;</code></pre>
+<p><strong>Showing style attributes</strong>  </p>
+<pre><code class="language-html">&lt;h1 data-show-style=&#39;font-family,font-size,line-height&#39;&gt;Sets a data-style attribute that is set as the element&#39;s :after pseduo element content.&lt;/h1&gt;</code></pre>
+<hr>
+<ol>
+<li><strong><code>code.snippets.js</code></strong> - Wrap your component inside an element with the class <code>.make-snippet</code> and this .js will take your component&#39;s markup and copy it into a pre/code snippet that gets appended below the live example.</li>
+</ol>
+<pre><code class="language-html">&lt;div class=&#39;make-snippet&#39;&gt;
+  &lt;h1&gt;This is my component. It&#39;s just an h1 tag but I&#39;m proud of it.&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+<hr>
+<ol>
+<li><strong><code>color.palette.js</code></strong> - This automatically creates background-colors for the color palette section of the guide. If you follow the conventions for creating the color palette there&#39;s nothing you need to do here.</li>
+</ol>
+<hr>
+<ol>
+<li><strong><code>lorem.js</code></strong> - A lorem ipsum generator.  </li>
+</ol>
+<pre><code class="language-html">&lt;!-- generates two words of dummy text --&gt;
+&lt;h1 data-lorem=&#39;2w&#39;&gt;&lt;/h1&gt;
+
+&lt;!-- generates two sentences of dummy text --&gt;
+&lt;h1 data-lorem=&#39;2s&#39;&gt;&lt;/h1&gt;
+
+&lt;!-- generates two paragraphs of dummy text --&gt;
+&lt;h1 data-lorem=&#39;2p&#39;&gt;&lt;/h1&gt;
+
+&lt;!-- generates between 2-5 sentences of dummy text --&gt;
+&lt;h1 data-lorem=&#39;2-5s&#39;&gt;&lt;/h1&gt;</code></pre>
+<hr>
+<ol>
+<li><strong><code>navigation.js</code></strong> - Automatically builds the style guide&#39;s sidebar navigation by crawling each <code>section &gt; h2.docs</code> for title and <code>section#id</code> for anchor link.  </li>
+</ol>
+<hr>
+<ol>
+<li><strong><code>prism.js</code></strong> - <a href="http://prismjs.com/">prism.js</a> for syntax highlighting.</li>
+</ol>
+<hr>
+<h2>Working with harp and the partials</h2>
+<h3>Documenting the color palette <code>_partials/color-palette.ejs</code></h3>
+<pre><code class="language-html">&lt;!-- send your colors into the parial like so --&gt;
+&lt;%- 
+  partial(&quot;_partials/color-palette&quot;, {
+    palette: {
+      &#39;Navy&#39; : &#39;#001F3F&#39;,
+      &#39;Blue&#39; : &#39;#0074D9&#39;,
+      &#39;Aqua&#39; : &#39;#7FDBFF&#39;,
+      &#39;Teal&#39; : &#39;#39CCCC&#39;,
+      &#39;Olive&#39;: &#39;#3D9970&#39;,
+      &#39;Green&#39;: &#39;#2ECC40&#39;,
+      &#39;Lime&#39; : &#39;#01FF70&#39;,
+      &#39;Yellow&#39;: &#39;#FFDC00&#39;,
+      &#39;Orange&#39;: &#39;#FF851B&#39;,
+      &#39;Red&#39;: &#39;#FF4136&#39;,
+      &#39;Maroon&#39;: &#39;#85144B&#39;,
+      &#39;Fuchsia&#39;: &#39;#F012BE&#39;,
+      &#39;Purple&#39;: &#39;#B10DC9&#39;,
+      &#39;Black&#39;: &#39;#111&#39;,
+      &#39;Gray&#39; : &#39;#AAA&#39;,
+      &#39;Silver&#39;: &#39;#DDD&#39;
+    }
+  }) 
+%&gt;
+
+&lt;!-- outputs --&gt;
+&lt;ul class=&quot;color-palette&quot;&gt;
+  &lt;li title=&quot;#001F3F&quot; data-name=&quot;Navy&quot; style=&quot;background-color: rgb(0, 31, 63);&quot;&gt;&lt;/li&gt;
+  &lt;li title=&quot;#0074D9&quot; data-name=&quot;Blue&quot; style=&quot;background-color: rgb(0, 116, 217);&quot;&gt;&lt;/li&gt;
+  &lt;li title=&quot;#7FDBFF&quot; data-name=&quot;Aqua&quot; style=&quot;background-color: rgb(127, 219, 255);&quot;&gt;&lt;/li&gt;
+  &lt;li title=&quot;#39CCCC&quot; data-name=&quot;Teal&quot; style=&quot;background-color: rgb(57, 204, 204);&quot;&gt;&lt;/li&gt;
+  &lt;li title=&quot;#3D9970&quot; data-name=&quot;Olive&quot; style=&quot;background-color: rgb(61, 153, 112);&quot;&gt;&lt;/li&gt;
+  &lt;li title=&quot;#2ECC40&quot; data-name=&quot;Green&quot; style=&quot;background-color: rgb(46, 204, 64);&quot;&gt;&lt;/li&gt;
+  &lt;li title=&quot;#01FF70&quot; data-name=&quot;Lime&quot; style=&quot;background-color: rgb(1, 255, 112);&quot;&gt;&lt;/li&gt;
+  &lt;li title=&quot;#FFDC00&quot; data-name=&quot;Yellow&quot; style=&quot;background-color: rgb(255, 220, 0);&quot;&gt;&lt;/li&gt;
+  &lt;li title=&quot;#FF851B&quot; data-name=&quot;Orange&quot; style=&quot;background-color: rgb(255, 133, 27);&quot;&gt;&lt;/li&gt;
+  &lt;li title=&quot;#FF4136&quot; data-name=&quot;Red&quot; style=&quot;background-color: rgb(255, 65, 54);&quot;&gt;&lt;/li&gt;
+  &lt;li title=&quot;#85144B&quot; data-name=&quot;Maroon&quot; style=&quot;background-color: rgb(133, 20, 75);&quot;&gt;&lt;/li&gt;
+  &lt;li title=&quot;#F012BE&quot; data-name=&quot;Fuchsia&quot; style=&quot;background-color: rgb(240, 18, 190);&quot;&gt;&lt;/li&gt;
+  &lt;li title=&quot;#B10DC9&quot; data-name=&quot;Purple&quot; style=&quot;background-color: rgb(177, 13, 201);&quot;&gt;&lt;/li&gt;
+  &lt;li title=&quot;#111&quot; data-name=&quot;Black&quot; style=&quot;background-color: rgb(17, 17, 17);&quot;&gt;&lt;/li&gt;
+  &lt;li title=&quot;#AAA&quot; data-name=&quot;Gray&quot; style=&quot;background-color: rgb(170, 170, 170);&quot;&gt;&lt;/li&gt;
+  &lt;li title=&quot;#DDD&quot; data-name=&quot;Silver&quot; style=&quot;background-color: rgb(221, 221, 221);&quot;&gt;&lt;/li&gt;
+  &lt;/ul&gt;</code></pre>
+<h3>Documenting typography <code>_partials/typography.ejs</code></h3>
+<p>Use this to document text elements.</p>
+<pre><code class="language-html">&lt;!-- declare your typography like so --&gt;
+&lt;%- partial(&#39;_partials/typography&#39;,{
+  elements : {
+    &#39;h1&#39; : {
+      &#39;content&#39;: &#39;Hello World&#39;,
+      &#39;attributes&#39;: {
+        &#39;class&#39; : &#39;jumbo tron&#39;,
+        &#39;data-annotate-styles&#39;: &#39;font-size,line-height&#39;,
+        &#39;data-annotate-tag&#39; : true
+      }
+    }
+  }
+})
+%&gt;
+
+&lt;!-- outputs --&gt;
+&lt;h1 class=&quot;jumbo tron&quot; data-lorem=&quot;1-2s&quot; data-annotate-styles=&quot;font-size,line-height&quot; data-annotate-tag=&quot;h1.jumbo.tron&quot; data-styles=&quot;font-size: 96px; line-height: normal; &quot;&gt;Hello World&lt;/h1&gt;
+
+
+&lt;!-- or use the lorem generator to get random text content on every page load. Good for stress testing. --&gt;
+&lt;%- partial(&#39;_partials/typography&#39;,{
+  elements : {
+    &#39;h1&#39; : {
+      &#39;attributes&#39;: {
+        &#39;class&#39; : &#39;jumbo tron&#39;,
+        &#39;data-lorem&#39;: &#39;2-6s&#39;,
+        &#39;data-annotate-styles&#39;: &#39;font-size,line-height&#39;,
+        &#39;data-annotate-tag&#39; : true
+      }
+    }
+  }
+})
+%&gt;
+
+&lt;!-- outputs --&gt;
+&lt;h1 class=&quot;jumbo tron&quot; data-lorem=&quot;1-2s&quot; data-annotate-styles=&quot;font-size,line-height&quot; data-annotate-tag=&quot;h1.jumbo.tron&quot; data-styles=&quot;font-size: 96px; line-height: normal; &quot;&gt;Bibendum tellus a augue eu ullamcorper tellus. Nibh sit pulvinar magna magna pretium.&lt;/h1&gt;</code></pre>
+<h3>Documenting components <code>_partials/blank-component.ejs</code></h3>
+<p>The blank component partial gives you a starting point to paste your code and have <code>src/js/code.snippets.js</code> auto-generate a code snippet for you.</p>
+<p>If you want to see an actual example, look at <code>_partials/sample-component.ejs</code>. It&#39;s a form and it looks terrible but you get the basic idea.</p>
+
+      </main>
+
+      <script title='Prism.js : syntax highlighting' src="js/prism.js"></script>
+      <script title="lorem generator" src="js/lorem.js"></script>
+      <script title="style guide navigation" src="js/navigation.js"></script>
+      <script title="style annotation" src="js/annotation.js"></script>
+      <script title="color palette" src="js/color.palette.js"></script>
+      <script title="creates code snippets" src="js/code.snippets.js"></script>
+
+  </body>
+</html>

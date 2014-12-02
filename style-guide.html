@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Style Guide</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="css/style-guide.css">
+
+    </head>
+    <body>
+
+      <aside id='sidebar'>
+        <i></i>
+        <span>Style Guide</span>
+        <ul>
+        </ul>
+      </aside>
+
+      <main>
+        <section>
+  <h1>Style Guide</h1>
+</section>
+
+<!-- sample color palette -->
+<section id='color-palette'>
+
+  <h2 class='docs'>Color Palette</h2>
+  <p class='lead'></p>
+  
+  <p></p>
+  
+  <ul class='color-palette'>
+  
+          <li title='#001F3F' data-name='Navy'></li>
+          
+          <li title='#0074D9' data-name='Blue'></li>
+          
+          <li title='#7FDBFF' data-name='Aqua'></li>
+          
+          <li title='#39CCCC' data-name='Teal'></li>
+          
+          <li title='#3D9970' data-name='Olive'></li>
+          
+          <li title='#2ECC40' data-name='Green'></li>
+          
+          <li title='#01FF70' data-name='Lime'></li>
+          
+          <li title='#FFDC00' data-name='Yellow'></li>
+          
+          <li title='#FF851B' data-name='Orange'></li>
+          
+          <li title='#FF4136' data-name='Red'></li>
+          
+          <li title='#85144B' data-name='Maroon'></li>
+          
+          <li title='#F012BE' data-name='Fuchsia'></li>
+          
+          <li title='#B10DC9' data-name='Purple'></li>
+          
+          <li title='#111' data-name='Black'></li>
+          
+          <li title='#AAA' data-name='Gray'></li>
+          
+          <li title='#DDD' data-name='Silver'></li>
+          
+  </ul>
+
+</section>
+
+<!-- sample typography section -->
+<section id='typography'>
+
+  <h2 class='docs'>Typography</h2>
+  <p class='lead'></p>
+  
+  <p></p>
+
+  
+
+  <h1 class="jumbo tron"data-show-styles="font-size,line-height"data-show-tag="true">Hello World </h1><h2 class="jumbo tron"data-lorem="1-2s"data-show-styles="font-size,line-height"data-show-tag="true"></h2><p class="jumbo tron"data-lorem="1-2s"data-show-styles="font-size,line-height"data-show-tag="true"></p>
+
+</section>
+
+<section id='sample-component'>
+
+  <h2 class='docs'>Sample Component</h2>
+
+  <div class='make-snippet'>
+    <!-- even the comments show up -->
+    <form id="register">
+      <h1>Register for Miss Bakers Space Cadets</h1>
+        <fieldset> 
+          <legend>Personal details</legend> 
+          <div> 
+              <label>First Name
+              <input id="given-name" name="given-name" type="text" placeholder="First name only" required="" autofocus=""> 
+          </label>
+          </div>
+          <div> 
+            <label>Date of Birth
+              <input id="dob" name="dob" type="date" required="">
+          </label>
+          </div> 
+          <div> 
+              <label>Email 
+              <input id="email" name="email" type="email" placeholder="example@domain.com" required="">
+          </label> 
+          </div> 
+        </fieldset>
+        <fieldset> 
+          <legend>Card details</legend> 
+          <fieldset> 
+            <legend>Card type</legend> 
+            <div class="card-type"> 
+                <input id="visa" name="cardtype" type="radio"> 
+                <label for="visa">VISA</label> 
+                <input id="mastercard" name="cardtype" type="radio">
+                <label for="mastercard">Mastercard</label> 
+                <input id="amex" name="cardtype" type="radio"> 
+                <label for="amex">AMEX</label>
+            </div> 
+          </fieldset>
+          <div> 
+              <label>Name
+              <input id="cardName" name="cardName" type="text" placeholder="Name as it appears on your card" required="">
+          </label>  
+          </div>
+          <div> 
+              <label>Card number 
+              <input id="cardNo" name="cardNo" type="number" required="" title="The sixteen digit number across the middle of your card."> 
+          </label>
+          </div>
+          <div> 
+              <label>Security code 
+              <input id="security" name="security" type="number" required="" pattern="[0-9]{3}" title="The last three digits on the back of your card.">
+          </label> 
+          </div>
+          <div> 
+              <label>Expiry Date 
+              <input id="expiry" name="expiry" type="month">
+          </label>
+          </div>
+        </fieldset> 
+        <fieldset> 
+          <div> 
+            <button type="submit">Place Order</button> 
+          </div> 
+        </fieldset> 
+      </form>
+
+  </div> <!-- end make snippet -->
+
+</section>
+      </main>
+
+      <script title='Prism.js : syntax highlighting' src="js/prism.js"></script>
+      <script title="lorem generator" src="js/lorem.js"></script>
+      <script title="style guide navigation" src="js/navigation.js"></script>
+      <script title="style annotation" src="js/annotation.js"></script>
+      <script title="color palette" src="js/color.palette.js"></script>
+      <script title="creates code snippets" src="js/code.snippets.js"></script>
+
+  </body>
+</html>
