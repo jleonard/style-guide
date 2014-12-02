@@ -22,7 +22,8 @@ src/js
 └── style.annotation.js
 ```
 
-1. ``code.snippets.js`` - Wrap your component in an element with ``.make-snippet`` and your component's markup will be copied into a pre/code snippet that gets appended below the live example.
+
+1. **``code.snippets.js``** - Wrap your component in an element with ``.make-snippet`` and your component's markup will be copied into a pre/code snippet that gets appended below the live example.
 
 ```html
 <div class='make-snippet'>
