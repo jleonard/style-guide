@@ -1,6 +1,6 @@
 # Style Guide 
 
-> A project skeleton for creating component tear-sheets and style guides.
+> A project skeleton for creating component tear-sheets and style guides. Specifically this is a starting point for documenting color palettes, typography and ui elements and components.
 
 ## Getting Started
 1. Install [Node + NPM](http://nodejs.org/)
