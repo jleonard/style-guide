@@ -92,7 +92,7 @@ src/js
 
 ## Working with harp and the partials
 
-### The color palette partial ``_partials/color-palette.ejs``
+### Documenting the color palette ``_partials/color-palette.ejs``
 ```html
 <!-- send your colors into the parial like so -->
 <%- 
@@ -139,7 +139,7 @@ src/js
   </ul>
 ```
 
-### The typography partial ``_partials/typography.ejs``
+### Documenting typography ``_partials/typography.ejs``
 Use this to document text elements.
 
 ```html
@@ -181,3 +181,8 @@ Use this to document text elements.
 <h1 class="jumbo tron" data-lorem="1-2s" data-annotate-styles="font-size,line-height" data-annotate-tag="h1.jumbo.tron" data-styles="font-size: 96px; line-height: normal; ">Bibendum tellus a augue eu ullamcorper tellus. Nibh sit pulvinar magna magna pretium.</h1>
 
 ```
+
+### Documenting components ``_partials/blank-component.ejs``
+The blank component partial gives you a starting point to paste your code and have ``src/js/code.snippets.js`` auto-generate a code snippet for you.
+
+If you want to see an actual example, look at ``_partials/sample-component.ejs``. It's a form and it looks terrible but you get the basic idea.
