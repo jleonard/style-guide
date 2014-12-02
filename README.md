@@ -61,6 +61,7 @@ src/js
   <h1>This is my component. It's just an h1 tag but I'm proud of it.</h1>
 </div>
 ```
+
 ---  
 3. **``color.palette.js``** - This automatically creates background-colors for the color palette section of the guide. If you follow the conventions for creating the color palette there's nothing you need to do here.
 ---
