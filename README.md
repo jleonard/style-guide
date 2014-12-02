@@ -40,7 +40,7 @@ src/js
 > **Note** that this displays the browser's __computed styles__. Example, css's rem values will display as pixels.
 
 **Showing tag and class info**
-```
+```html
 <h1 data-show-tag class='one two'></h1>
 
 <!-- outputs -->
