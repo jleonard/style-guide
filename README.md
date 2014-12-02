@@ -84,8 +84,8 @@ src/js
 ```
 ---  
 5. **``navigation.js``** - Automatically builds the style guide's sidebar navigation by crawling each ``section > h2`` for title and ``section#id`` for anchor link.
----  
 
+---  
 6. **``prism.js``** - [prism.js](http://prismjs.com/) for syntax highlighting.
 ---
 
