@@ -4,7 +4,7 @@
 
 desc "clean"
 task :clean do
-  sh "rm -rf js/ css/ *.html bower.json"
+  sh "rm -rf js/ css/ *.html bower.json dist/"
 end
 
 desc "build everything"
