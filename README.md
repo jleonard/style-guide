@@ -90,3 +90,51 @@ src/js
 
 ---
 
+## Working with harp and the partials
+
+### Using the color palette partial
+```html
+<!-- send your colors into the parial like so -->
+<%- 
+  partial("_partials/color-palette", {
+    palette: {
+      'Navy' : '#001F3F',
+      'Blue' : '#0074D9',
+      'Aqua' : '#7FDBFF',
+      'Teal' : '#39CCCC',
+      'Olive': '#3D9970',
+      'Green': '#2ECC40',
+      'Lime' : '#01FF70',
+      'Yellow': '#FFDC00',
+      'Orange': '#FF851B',
+      'Red': '#FF4136',
+      'Maroon': '#85144B',
+      'Fuchsia': '#F012BE',
+      'Purple': '#B10DC9',
+      'Black': '#111',
+      'Gray' : '#AAA',
+      'Silver': '#DDD'
+    }
+  }) 
+%>
+
+<!-- outputs -->
+<ul class="color-palette">
+  <li title="#001F3F" data-name="Navy" style="background-color: rgb(0, 31, 63);"></li>
+  <li title="#0074D9" data-name="Blue" style="background-color: rgb(0, 116, 217);"></li>
+  <li title="#7FDBFF" data-name="Aqua" style="background-color: rgb(127, 219, 255);"></li>
+  <li title="#39CCCC" data-name="Teal" style="background-color: rgb(57, 204, 204);"></li>
+  <li title="#3D9970" data-name="Olive" style="background-color: rgb(61, 153, 112);"></li>
+  <li title="#2ECC40" data-name="Green" style="background-color: rgb(46, 204, 64);"></li>
+  <li title="#01FF70" data-name="Lime" style="background-color: rgb(1, 255, 112);"></li>
+  <li title="#FFDC00" data-name="Yellow" style="background-color: rgb(255, 220, 0);"></li>
+  <li title="#FF851B" data-name="Orange" style="background-color: rgb(255, 133, 27);"></li>
+  <li title="#FF4136" data-name="Red" style="background-color: rgb(255, 65, 54);"></li>
+  <li title="#85144B" data-name="Maroon" style="background-color: rgb(133, 20, 75);"></li>
+  <li title="#F012BE" data-name="Fuchsia" style="background-color: rgb(240, 18, 190);"></li>
+  <li title="#B10DC9" data-name="Purple" style="background-color: rgb(177, 13, 201);"></li>
+  <li title="#111" data-name="Black" style="background-color: rgb(17, 17, 17);"></li>
+  <li title="#AAA" data-name="Gray" style="background-color: rgb(170, 170, 170);"></li>
+  <li title="#DDD" data-name="Silver" style="background-color: rgb(221, 221, 221);"></li>
+  </ul>
+```
