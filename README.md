@@ -66,9 +66,10 @@ src/js
 ---  
 3. **``color.palette.js``** - This automatically creates background-colors for the color palette section of the guide. If you follow the conventions for creating the color palette there's nothing you need to do here.
 
----
-4. **``lorem.js``** - A lorem ipsum generator.
-```
+---  
+4. **``lorem.js``** - A lorem ipsum generator.  
+
+```html
 <!-- generates two words of dummy text -->
 <h1 data-lorem='2w'></h1>
 
@@ -81,9 +82,11 @@ src/js
 <!-- generates between 2-5 sentences of dummy text -->
 <h1 data-lorem='2-5s'></h1>
 ```
----
+---  
+
 5. **``navigation.js``** - Automatically builds the style guide's sidebar navigation by crawling each ``section > h2`` for title and ``section#id`` for anchor link.
----
+---  
+
 6. **``prism.js``** - [prism.js](http://prismjs.com/) for syntax highlighting.
 ---
 
