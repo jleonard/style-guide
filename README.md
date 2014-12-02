@@ -5,6 +5,11 @@
 ## Getting Started
 1. Install [Node + NPM](http://nodejs.org/)
 2. Install [Harp](http://harpjs.com/)
+3. Clone the repo
+
+### Helpful harp commands
+To run a server and live-reload as you work : ``harp server src --port 3000``  
+To compile a static website : ``harp compile src dist``
 
 ### The project structure
 ```
@@ -13,7 +18,7 @@ src
 ├── _partials        // partials for style guide sections
 ├── css              // the .less files used for the styleguide
 ├── index.ejs        // the tearsheet   
-└── js
+└── js               // js files specific to the style guide functionality
 
 ```
 
