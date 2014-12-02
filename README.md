@@ -82,7 +82,7 @@ src/js
 <!-- generates between 2-5 sentences of dummy text -->
 <h1 data-lorem='2-5s'></h1>
 ```
----  
+---   
 5. **``navigation.js``** - Automatically builds the style guide's sidebar navigation by crawling each ``section > h2`` for title and ``section#id`` for anchor link.
 
 ---  
