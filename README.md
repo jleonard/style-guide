@@ -156,10 +156,10 @@ Use this to document text elements.
     }
   }
 })
+%>
 
 <!-- outputs -->
 <h1 class="jumbo tron" data-lorem="1-2s" data-annotate-styles="font-size,line-height" data-annotate-tag="h1.jumbo.tron" data-styles="font-size: 96px; line-height: normal; ">Hello World</h1>
-%>
 
 
 <!-- or use the lorem generator to get random text content on every page load. Good for stress testing. -->
@@ -175,8 +175,9 @@ Use this to document text elements.
     }
   }
 })
+%>
 
 <!-- outputs -->
 <h1 class="jumbo tron" data-lorem="1-2s" data-annotate-styles="font-size,line-height" data-annotate-tag="h1.jumbo.tron" data-styles="font-size: 96px; line-height: normal; ">Bibendum tellus a augue eu ullamcorper tellus. Nibh sit pulvinar magna magna pretium.</h1>
-%>
+
 ```
