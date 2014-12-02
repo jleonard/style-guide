@@ -2,9 +2,9 @@
 
   document.addEventListener('DOMContentLoaded', function(){
 
-    var elements = document.querySelectorAll('[data-annotate-styles]');
+    var elements = document.querySelectorAll('[data-show-styles]');
     Array.prototype.forEach.call(elements, function(el, i){
-      var attr = el.getAttribute('data-annotate-styles');
+      var attr = el.getAttribute('data-show-styles');
       if(attr){
         var properties = attr.split(',');
         var list = '';
@@ -24,17 +24,17 @@
 
 
     // tag annotation
-    elements = document.querySelectorAll('[data-annotate-tag]');
+    elements = document.querySelectorAll('[data-show-tag]');
     Array.prototype.forEach.call(elements, function(el, i){
       var list = '';
-      if(el.hasAttribute('data-annotate-tag')){
+      if(el.hasAttribute('data-show-tag')){
         list += el.tagName.toLowerCase();
         var classList = el.classList;
         if(classList.length > 0){
           classList = '.'+classList.toString().replace(/ /g,'.');
           list += classList;
         }
-        el.setAttribute('data-annotate-tag',list);
+        el.setAttribute('data-show-tag',list);
       }
     });
 

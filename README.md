@@ -32,11 +32,26 @@ src/js
 ├── lorem.js
 ├── navigation.js
 ├── prism.js
-└── style.annotation.js
+└── annotation.js
 ```
+---  
+1. **``annotation.js``** - A quick way to expose an element's tag, class and style information. Good for exposing typography info.
+
+> **Note** that this displays the browser's __computed styles__. Example, css's rem values will display as pixels.
+
+**Showing tag and class info**
+```html
+<h1 data-show-tag class='one two'></h1>
+
+<!-- outputs -->
+<h1 data-show-tag >The data-show-tag attribute is set as the element's :before pseduo element content.</h1>
+``` 
+
+**Showing style attributes**
+<h1 data-show-style='font-family,font-size,line-height'>Sets a data-style attribute that is set as the element's :after pseduo element content.</h1>
 
 ---  
-1. **``code.snippets.js``** - Wrap your component inside an element with the class ``.make-snippet`` and this .js will take your component's markup and copy it into a pre/code snippet that gets appended below the live example.
+2. **``code.snippets.js``** - Wrap your component inside an element with the class ``.make-snippet`` and this .js will take your component's markup and copy it into a pre/code snippet that gets appended below the live example.
 
 ```html
 <div class='make-snippet'>
@@ -44,6 +59,25 @@ src/js
 </div>
 ```
 ---  
-2. **``color.palette.js``** - This automatically creates background-colors for the color palette section of the guide. If you follow the conventions for creating the color palette there's nothing you need to do here.
+3. **``color.palette.js``** - This automatically creates background-colors for the color palette section of the guide. If you follow the conventions for creating the color palette there's nothing you need to do here.
+---
+4. **``lorem.js``** - A lorem ipsum generator.
+```html
+<!-- generates two words of dummy text -->
+<h1 data-lorem='2w'></h1>
 
+<!-- generates two sentences of dummy text -->
+<h1 data-lorem='2s'></h1>
+
+<!-- generates two paragraphs of dummy text -->
+<h1 data-lorem='2p'></h1>
+
+<!-- generates between 2-5 sentences of dummy text -->
+<h1 data-lorem='2-5s'></h1>
+```
+---
+5. **``navigation.js``** - Automatically builds the style guide's sidebar navigation by crawling each ``section > h2`` for title and ``section#id`` for anchor link.
+---
+6. **``prism.js``** - [prism.js](http://prismjs.com/) for syntax highlighting.
+---
 
