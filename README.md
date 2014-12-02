@@ -40,7 +40,7 @@ src/js
 > **Note** that this displays the browser's __computed styles__. Example, css's rem values will display as pixels.
 
 **Showing tag and class info**
-```html
+```
 <h1 data-show-tag class='one two'></h1>
 
 <!-- outputs -->
@@ -48,12 +48,13 @@ src/js
 ``` 
 
 **Showing style attributes**
+```
 <h1 data-show-style='font-family,font-size,line-height'>Sets a data-style attribute that is set as the element's :after pseduo element content.</h1>
-
+```
 ---  
 2. **``code.snippets.js``** - Wrap your component inside an element with the class ``.make-snippet`` and this .js will take your component's markup and copy it into a pre/code snippet that gets appended below the live example.
 
-```html
+```
 <div class='make-snippet'>
   <h1>This is my component. It's just an h1 tag but I'm proud of it.</h1>
 </div>
@@ -62,7 +63,7 @@ src/js
 3. **``color.palette.js``** - This automatically creates background-colors for the color palette section of the guide. If you follow the conventions for creating the color palette there's nothing you need to do here.
 ---
 4. **``lorem.js``** - A lorem ipsum generator.
-```html
+```
 <!-- generates two words of dummy text -->
 <h1 data-lorem='2w'></h1>
 
