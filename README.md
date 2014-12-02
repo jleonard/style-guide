@@ -22,8 +22,8 @@ src
 
 ```
 
-### The Javascript
-**No 3rd party dependencies required! All .js is native to avoid conflicts with the libs used in the UI.**
+## The Javascript
+> **No 3rd party dependencies required! All .js is native to avoid conflicts with the libs used in the UI.**
 
 ```
 src/js
@@ -35,20 +35,15 @@ src/js
 └── style.annotation.js
 ```
 
----
-1. **``code.snippets.js``** - Wrap your component in an element with ``.make-snippet`` and your component's markup will be copied into a pre/code snippet that gets appended below the live example.
+---  
+1. **``code.snippets.js``** - Wrap your component inside an element with the class ``.make-snippet`` and this .js will take your component's markup and copy it into a pre/code snippet that gets appended below the live example.
 
 ```html
 <div class='make-snippet'>
   <h1>This is my component. It's just an h1 tag but I'm proud of it.</h1>
 </div>
 ```
----
-2. **``color.palette.js``** - TODO
+---  
+2. **``color.palette.js``** - This automatically creates background-colors for the color palette section of the guide. If you follow the conventions for creating the color palette there's nothing you need to do here.
 
-```html
-<div class='make-snippet'>
-  <h1>This is my component. It's just an h1 tag but I'm proud of it.</h1>
-</div>
-```
 
