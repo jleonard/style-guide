@@ -11,7 +11,7 @@
 
     // build the sidebar nav
     nav = sidebar.querySelectorAll('ul')[0];
-    var list = document.querySelectorAll('main > section > h2');
+    var list = document.querySelectorAll('main > section > h2.docs');
     [].forEach.call(list, function(el) {
       var link = el.parentNode;
       var li = document.createElement('li');

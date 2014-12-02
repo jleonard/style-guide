@@ -83,7 +83,7 @@ src/js
 <h1 data-lorem='2-5s'></h1>
 ```
 ---   
-5. **``navigation.js``** - Automatically builds the style guide's sidebar navigation by crawling each ``section > h2`` for title and ``section#id`` for anchor link.  
+5. **``navigation.js``** - Automatically builds the style guide's sidebar navigation by crawling each ``section > h2.docs`` for title and ``section#id`` for anchor link.  
 
 ---  
 6. **``prism.js``** - [prism.js](http://prismjs.com/) for syntax highlighting.

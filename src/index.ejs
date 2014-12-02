@@ -2,6 +2,7 @@
   <h1>Style Guide</h1>
 </section>
 
+<!-- sample color palette -->
 <%- 
   partial("_partials/color-palette", {
     palette: {
@@ -25,10 +26,27 @@
   }) 
 %>
 
+<!-- sample typography section -->
 <%- partial('_partials/typography',{
   elements : {
     'h1' : {
       'content': 'Hello World ',
+      'attributes': {
+        'class' : 'jumbo tron',
+        'data-lorem': '1-2s',
+        'data-annotate-styles': 'font-size,line-height',
+        'data-annotate-tag' : true
+      }
+    },
+    'h2' : {
+      'attributes': {
+        'class' : 'jumbo tron',
+        'data-lorem': '1-2s',
+        'data-annotate-styles': 'font-size,line-height',
+        'data-annotate-tag' : true
+      }
+    },
+    'p' : {
       'attributes': {
         'class' : 'jumbo tron',
         'data-lorem': '1-2s',
