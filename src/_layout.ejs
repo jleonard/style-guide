@@ -21,51 +21,7 @@
       </aside>
 
       <main>
-
-        <section>
-          <h1>Style Guide</h1>
-        </section>
-
-        <%- 
-          partial("_partials/color-palette", {
-            palette: {
-              'Navy' : '#001F3F',
-              'Blue' : '#0074D9',
-              'Aqua' : '#7FDBFF',
-              'Teal' : '#39CCCC',
-              'Olive': '#3D9970',
-              'Green': '#2ECC40',
-              'Lime' : '#01FF70',
-              'Yellow': '#FFDC00',
-              'Orange': '#FF851B',
-              'Red': '#FF4136',
-              'Maroon': '#85144B',
-              'Fuchsia': '#F012BE',
-              'Purple': '#B10DC9',
-              'Black': '#111',
-              'Gray' : '#AAA',
-              'Silver': '#DDD'
-            }
-          }) 
-        %>
-
-        <%- partial('_partials/typography',{
-          elements : {
-            'h1' : {
-              'content': 'Hello World ',
-              'attributes': {
-                'class' : 'jumbo tron',
-                'data-lorem': '1-2s',
-                'data-annotate-styles': 'font-size,line-height',
-                'data-annotate-tag' : true
-              }
-            }
-          }
-        })
-        %>
-
-       <%- partial('_partials/sample-component') %>
-
+        <%- yield %>
       </main>
 
       <script title='Prism.js : syntax highlighting' src="js/prism.js"></script>
