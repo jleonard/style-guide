@@ -92,7 +92,7 @@ src/js
 
 ## Working with harp and the partials
 
-### Using the color palette partial
+### The color palette partial ``_partials/color-palette.ejs``
 ```html
 <!-- send your colors into the parial like so -->
 <%- 
@@ -137,4 +137,46 @@ src/js
   <li title="#AAA" data-name="Gray" style="background-color: rgb(170, 170, 170);"></li>
   <li title="#DDD" data-name="Silver" style="background-color: rgb(221, 221, 221);"></li>
   </ul>
+```
+
+### The typography partial ``_partials/typography.ejs``
+Use this to document text elements.
+
+```html
+<!-- declare your typography like so -->
+<%- partial('_partials/typography',{
+  elements : {
+    'h1' : {
+      'content': 'Hello World',
+      'attributes': {
+        'class' : 'jumbo tron',
+        'data-annotate-styles': 'font-size,line-height',
+        'data-annotate-tag' : true
+      }
+    }
+  }
+})
+
+<!-- outputs -->
+<h1 class="jumbo tron" data-lorem="1-2s" data-annotate-styles="font-size,line-height" data-annotate-tag="h1.jumbo.tron" data-styles="font-size: 96px; line-height: normal; ">Hello World</h1>
+%>
+
+
+<!-- or use the lorem generator to get random text content on every page load. Good for stress testing. -->
+<%- partial('_partials/typography',{
+  elements : {
+    'h1' : {
+      'attributes': {
+        'class' : 'jumbo tron',
+        'data-lorem': '2-6s',
+        'data-annotate-styles': 'font-size,line-height',
+        'data-annotate-tag' : true
+      }
+    }
+  }
+})
+
+<!-- outputs -->
+<h1 class="jumbo tron" data-lorem="1-2s" data-annotate-styles="font-size,line-height" data-annotate-tag="h1.jumbo.tron" data-styles="font-size: 96px; line-height: normal; ">Bibendum tellus a augue eu ullamcorper tellus. Nibh sit pulvinar magna magna pretium.</h1>
+%>
 ```
