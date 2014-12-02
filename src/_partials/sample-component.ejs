@@ -1,0 +1,70 @@
+<section id='sample-component'>
+
+  <h2>Sample Component</h2>
+
+  <div class='make-snippet'>
+    <!-- even the comments show up -->
+    <form id="register">
+      <h1>Register for Miss Bakers Space Cadets</h1>
+        <fieldset> 
+          <legend>Personal details</legend> 
+          <div> 
+              <label>First Name
+              <input id="given-name" name="given-name" type="text" placeholder="First name only" required="" autofocus=""> 
+          </label>
+          </div>
+          <div> 
+            <label>Date of Birth
+              <input id="dob" name="dob" type="date" required="">
+          </label>
+          </div> 
+          <div> 
+              <label>Email 
+              <input id="email" name="email" type="email" placeholder="example@domain.com" required="">
+          </label> 
+          </div> 
+        </fieldset>
+        <fieldset> 
+          <legend>Card details</legend> 
+          <fieldset> 
+            <legend>Card type</legend> 
+            <div class="card-type"> 
+                <input id="visa" name="cardtype" type="radio"> 
+                <label for="visa">VISA</label> 
+                <input id="mastercard" name="cardtype" type="radio">
+                <label for="mastercard">Mastercard</label> 
+                <input id="amex" name="cardtype" type="radio"> 
+                <label for="amex">AMEX</label>
+            </div> 
+          </fieldset>
+          <div> 
+              <label>Name
+              <input id="cardName" name="cardName" type="text" placeholder="Name as it appears on your card" required="">
+          </label>  
+          </div>
+          <div> 
+              <label>Card number 
+              <input id="cardNo" name="cardNo" type="number" required="" title="The sixteen digit number across the middle of your card."> 
+          </label>
+          </div>
+          <div> 
+              <label>Security code 
+              <input id="security" name="security" type="number" required="" pattern="[0-9]{3}" title="The last three digits on the back of your card.">
+          </label> 
+          </div>
+          <div> 
+              <label>Expiry Date 
+              <input id="expiry" name="expiry" type="month">
+          </label>
+          </div>
+        </fieldset> 
+        <fieldset> 
+          <div> 
+            <button type="submit">Place Order</button> 
+          </div> 
+        </fieldset> 
+      </form>
+
+  </div> <!-- end make snippet -->
+
+</section>

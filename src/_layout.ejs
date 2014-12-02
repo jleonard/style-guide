@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Style Guide</title>
@@ -13,31 +14,64 @@
     <body>
 
       <aside id='sidebar'>
+        <i></i>
+        <span>Style Guide</span>
         <ul>
         </ul>
       </aside>
 
       <main>
 
-        <section id='color-palette'>
-          <h2>Color Palette</h2>
-          <ul class='color-palette'>
-            <li title='#c30' data-name='Red'></li>
-            <li title='#f90' data-name='Yellow'></li>
-            <li title='#235' data-name='Blue'></li>
-          </ul>
+        <section>
+          <h1>Style Guide</h1>
         </section>
 
-        <div class='make-snippet'>
-          <h1>Wocka wocka wocka</h1>
-            <h2>uompo</h2>
-        </div>
+        <%- 
+          partial("_partials/color-palette", {
+            palette: {
+              'Navy' : '#001F3F',
+              'Blue' : '#0074D9',
+              'Aqua' : '#7FDBFF',
+              'Teal' : '#39CCCC',
+              'Olive': '#3D9970',
+              'Green': '#2ECC40',
+              'Lime' : '#01FF70',
+              'Yellow': '#FFDC00',
+              'Orange': '#FF851B',
+              'Red': '#FF4136',
+              'Maroon': '#85144B',
+              'Fuchsia': '#F012BE',
+              'Purple': '#B10DC9',
+              'Black': '#111',
+              'Gray' : '#AAA',
+              'Silver': '#DDD'
+            }
+          }) 
+        %>
+
+        <%- partial('_partials/typography',{
+          elements : {
+            'h1' : {
+              'content': 'Hello World ',
+              'attributes': {
+                'class' : 'jumbo tron',
+                'data-lorem': '1-2s',
+                'data-annotate-styles': 'font-size,line-height',
+                'data-annotate-tag' : true
+              }
+            }
+          }
+        })
+        %>
+
+       <%- partial('_partials/sample-component') %>
 
       </main>
 
       <script title='Prism.js : syntax highlighting' src="js/prism.js"></script>
-
-      <script title="color palette" src="js/navigation.js"></script>
+      <script title="lorem generator" src="js/lorem.js"></script>
+      <script title="style guide navigation" src="js/navigation.js"></script>
+      <script title="style annotation" src="js/style.annotation.js"></script>
       <script title="color palette" src="js/color.palette.js"></script>
       <script title="creates code snippets" src="js/code.snippets.js"></script>
 

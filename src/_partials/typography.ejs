@@ -1,0 +1,51 @@
+<section id='typography'>
+
+  <h2>Typography Cool</h2>
+  <p class='lead'></p>
+  
+  <p></p>
+
+  <% 
+  function createAttributes(attributes){
+    var str = '';
+    var object = attributes;
+    for(var key in object){
+      if(object.hasOwnProperty(key)){
+        var value = object[key];
+        str += key + '="' + value +'"';
+      }
+    }
+    return ' ' + str;
+  }
+
+  function openTag(tag,element){
+    var str = '<'+tag;
+      if(element.hasOwnProperty('attributes')){
+        str += createAttributes(element.attributes);
+      }
+    str += '>';
+    return str;
+  }
+
+  function closeTag(tag){
+    return '</'+tag+'>';
+  }
+
+  var html = '';
+  if(locals.elements){
+    var obj = locals.elements;
+    for(var key in obj){
+      if(obj.hasOwnProperty(key)){
+        html += openTag(key,obj[key]);
+        if(obj[key].hasOwnProperty('content')){
+          html += obj[key].content;
+        }
+        html += closeTag(key);
+      }
+    }
+  }
+  %>
+
+  <%- html %>
+
+</section>

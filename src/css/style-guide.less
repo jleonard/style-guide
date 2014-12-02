@@ -1,4 +1,4 @@
-@import (less) 'prism.css';
+@import (less) '_includes/prism.css';
 
 // scaffolding
 // --------------------------------
@@ -14,8 +14,75 @@ body{
   }
 }
 
+code{
+  background-color: rgba(245,242,240,1);
+  color: #07a;
+  padding: 0 3px;
+}
+
+// annotations
+// --------------------------------
+[data-annotate-tag]{
+  &:before{
+    display: block;
+    content: attr(data-annotate-tag);
+    font-family: monospace;
+    font-weight: normal;
+    text-transform: none;
+    text-decoration: none;
+    font-size: 12px;
+    color: grey;
+  }
+}
+[data-styles]{
+  &:after{
+    display: block;
+    content: attr(data-styles);
+    font-family: monospace;
+    font-weight: normal;
+    text-transform: none;
+    text-decoration: none;
+    font-size: 12px;
+    color: #07A;
+  }
+}
+
+// sidebar
+// --------------------------------
+@import (less) '_includes/sidebar.less';
+
 pre,pre[class*='language-']{
   padding: 0;
+}
+
+// content sections
+// --------------------------------
+section{
+  padding: 32px 0;
+  border-top: 1px solid lightgrey;
+  &:first-child{
+    border-top: none;
+  }
+}
+
+section {
+  > h1, > h2, > p{
+    font-family: Georgia, serif;
+    font-weight: normal;
+    color: #444;
+  }
+  > h1{
+    font-size: 96px;
+  }
+  > h2{
+    margin-top: 0;
+    font-size: 32px;
+  }
+  > p.lead{
+    font-size: 24px;
+    line-height: 1.5;
+    width: 75%;
+  }
 }
 
 // mixins and conveniences
@@ -26,39 +93,15 @@ pre,pre[class*='language-']{
   flex-flow: row;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
-
+}
+.vBox(){
+  display: flex;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 // color palette
 // --------------------------------
-.color-palette{
-  .hBox();
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  > *{
-    width: 200px;
-    height: 66px;
-    position: relative;
-    &:before{
-      font-family: sans-serif;
-      font-weight: bold;
-      font-size: 0.75rem;
-      content: attr(data-name) ': ' attr(title);
-      display: block;
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      background-color: white;
-      padding: 3px 4px;
-    }
-  }
-}
-
-body > aside{
-  ul{
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-  }
-}
+@import (less) '_includes/color-palette.less';

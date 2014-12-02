@@ -1,0 +1,24 @@
+<section id='color-palette'>
+
+  <h2>Color Palette</h2>
+  <p class='lead'></p>
+  
+  <p></p>
+  
+  <ul class='color-palette'>
+  <% 
+    if(locals.palette) {
+      var obj = locals.palette;
+      for(var key in obj){
+        if(obj.hasOwnProperty(key)){
+          var value = obj[key];
+          %>
+          <li title='<%-value%>' data-name='<%-key%>'></li>
+          <%
+        }
+      }
+    }
+  %>
+  </ul>
+
+</section>
