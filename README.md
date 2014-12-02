@@ -87,5 +87,6 @@ src/js
 
 ---  
 6. **``prism.js``** - [prism.js](http://prismjs.com/) for syntax highlighting.
+
 ---
 
