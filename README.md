@@ -52,6 +52,7 @@ src/js
 ```html
 <h1 data-show-style='font-family,font-size,line-height'>Sets a data-style attribute that is set as the element's :after pseduo element content.</h1>
 ```
+
 ---  
 2. **``code.snippets.js``** - Wrap your component inside an element with the class ``.make-snippet`` and this .js will take your component's markup and copy it into a pre/code snippet that gets appended below the live example.
 
