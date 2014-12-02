@@ -65,6 +65,7 @@ src/js
 
 ---  
 3. **``color.palette.js``** - This automatically creates background-colors for the color palette section of the guide. If you follow the conventions for creating the color palette there's nothing you need to do here.
+
 ---
 4. **``lorem.js``** - A lorem ipsum generator.
 ```
