@@ -49,7 +49,7 @@ src/js
 ``` 
 
 **Showing style attributes**  
-```
+```html
 <h1 data-show-style='font-family,font-size,line-height'>Sets a data-style attribute that is set as the element's :after pseduo element content.</h1>
 ```
 
