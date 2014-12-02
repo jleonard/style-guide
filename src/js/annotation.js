@@ -34,7 +34,7 @@
           classList = '.'+classList.toString().replace(/ /g,'.');
           list += classList;
         }
-        el.setAttribute('data-show-tag',list);
+        el.setAttribute('data-tag',list);
       }
     });
 
