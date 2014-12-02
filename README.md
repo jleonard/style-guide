@@ -39,7 +39,8 @@ src/js
 
 > **Note** that this displays the browser's __computed styles__. Example, css's rem values will display as pixels.
 
-**Showing tag and class info**
+**Showing tag and class info**  
+
 ```html
 <h1 data-show-tag class='one two'></h1>
 
@@ -47,14 +48,14 @@ src/js
 <h1 data-show-tag >The data-show-tag attribute is set as the element's :before pseduo element content.</h1>
 ``` 
 
-**Showing style attributes**
-```
+**Showing style attributes**  
+```html
 <h1 data-show-style='font-family,font-size,line-height'>Sets a data-style attribute that is set as the element's :after pseduo element content.</h1>
 ```
 ---  
 2. **``code.snippets.js``** - Wrap your component inside an element with the class ``.make-snippet`` and this .js will take your component's markup and copy it into a pre/code snippet that gets appended below the live example.
 
-```
+```html
 <div class='make-snippet'>
   <h1>This is my component. It's just an h1 tag but I'm proud of it.</h1>
 </div>
