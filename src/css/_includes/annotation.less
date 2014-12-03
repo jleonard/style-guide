@@ -1,23 +1,23 @@
-[data-show-tag]{
-  &:before{
+#styleGuide{
+  .annotation(){
     display: block;
-    content: attr(data-tag);
     font-weight: normal;
     text-transform: none;
     text-decoration: none;
     font-size: 12px;
+  }
+}
+[data-show-tag]{
+  &:before{
+    #styleGuide > .annotation();
+    content: attr(data-tag);
     color: grey;
   }
 }
 [data-show-styles]{
   &:after{
-    display: block;
+    #styleGuide > .annotation();
     content: attr(data-styles);
-    font-family: monospace;
-    font-weight: normal;
-    text-transform: none;
-    text-decoration: none;
-    font-size: 12px;
-    color: #07A;
+    color: red;
   }
 }
